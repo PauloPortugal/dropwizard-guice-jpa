@@ -1,0 +1,5 @@
+.idea/
+target/
+
+dropwizard-guice-jpa.iml
+dropwizard-guice.iml
