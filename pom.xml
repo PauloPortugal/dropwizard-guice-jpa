@@ -68,6 +68,12 @@
             <version>5.2.9.Final</version>
         </dependency>
 
+        <!-- Database dependencies-->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>4.1.2</version>
+        </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>

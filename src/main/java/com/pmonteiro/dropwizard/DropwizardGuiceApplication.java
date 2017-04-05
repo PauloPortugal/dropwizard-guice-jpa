@@ -7,6 +7,7 @@ import com.pmonteiro.dropwizard.resources.TasksResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import org.flywaydb.core.Flyway;
 
 public class DropwizardGuiceApplication extends Application<DropwizardGuiceConfiguration> {
 
@@ -26,6 +27,13 @@ public class DropwizardGuiceApplication extends Application<DropwizardGuiceConfi
 
     @Override
     public void run(final DropwizardGuiceConfiguration configuration, final Environment environment) {
+        Flyway flyway = new Flyway();
+        flyway.setDataSource(
+                configuration.getDataSourceFactory().getUrl(),
+                configuration.getDataSourceFactory().getUser(),
+                configuration.getDataSourceFactory().getPassword());
+        flyway.migrate();
+
         final Injector injector = Guice.createInjector(new DropwizardGuiceModule(configuration, environment));
         environment.jersey().register(injector.getInstance(TasksResource.class));
 
