@@ -35,6 +35,7 @@ public class TasksResource {
     @Timed
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(Task task) {
+        dao.persist(task);
         return Response.status(CREATED).build();
     }
 
