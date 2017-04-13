@@ -38,5 +38,4 @@ public class TasksResource {
         dao.persist(task);
         return Response.status(CREATED).build();
     }
-
 }
