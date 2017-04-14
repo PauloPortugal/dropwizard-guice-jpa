@@ -60,6 +60,12 @@
             <artifactId>guice-persist</artifactId>
             <version>${guice.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+
 
         <!-- Hibernate Dependencies -->
         <dependency>
@@ -96,6 +102,12 @@
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>3.0.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-jdbi</artifactId>
+            <version>${dropwizard.version}</version>
             <scope>test</scope>
         </dependency>
 
