@@ -31,8 +31,8 @@ public abstract class BaseDAO<T> {
         return Optional.ofNullable(entityManager.get().find(clazz, id));
     }
 
-    public T merge(final T object) {
-        return entityManager.get().merge(object);
+    public Optional<T> merge(final T object) {
+        return Optional.ofNullable(entityManager.get().merge(object));
     }
 
     public EntityManager getEntityManager() {
