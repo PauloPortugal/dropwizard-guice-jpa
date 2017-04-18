@@ -66,6 +66,12 @@
             <version>21.0</version>
         </dependency>
 
+        <!-- Swagger API documentation dependencies -->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jersey2-jaxrs</artifactId>
+            <version>1.5.0</version>
+        </dependency>
 
         <!-- Hibernate Dependencies -->
         <dependency>
