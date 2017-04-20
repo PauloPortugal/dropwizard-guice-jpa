@@ -49,6 +49,19 @@
             <version>${dropwizard.version}</version>
         </dependency>
 
+        <!-- Swagger Dependencies -->
+        <dependency>
+            <groupId>com.smoketurner</groupId>
+            <artifactId>dropwizard-swagger</artifactId>
+            <version>1.0.5-4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.glassfish.jersey.containers</groupId>
+                    <artifactId>jersey-container-servlet-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!-- Guice Dependencies -->
         <dependency>
             <groupId>com.google.inject</groupId>
