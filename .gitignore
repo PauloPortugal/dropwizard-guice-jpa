@@ -1,5 +1,10 @@
+# Intellij IDE
 .idea/
+
+# Maven build output
 target/
 
 dropwizard-guice-jpa.iml
 dropwizard-guice.iml
+
+dependency-reduced-pom.xml
