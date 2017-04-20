@@ -66,13 +66,6 @@
             <version>21.0</version>
         </dependency>
 
-        <!-- Swagger API documentation dependencies -->
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-jersey2-jaxrs</artifactId>
-            <version>1.5.0</version>
-        </dependency>
-
         <!-- Hibernate Dependencies -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -208,6 +201,36 @@
                         <argument>src/main/resources/config.yml</argument>
                     </arguments>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.kongchen</groupId>
+                <artifactId>swagger-maven-plugin</artifactId>
+                <version>3.1.4</version>
+                <configuration>
+                    <apiSources>
+                        <apiSource>
+                            <springmvc>false</springmvc>
+                            <locations>com.pmonteiro.dropwizard.resources</locations>
+                            <schemes>http</schemes>
+                            <schemes>https</schemes>
+                            <host>app.domain.com</host>
+                            <info>
+                                <title>REST Task API</title>
+                                <version>v1.0.0</version>
+                                <description>RESTful interface to easily consuming the Task API</description>
+                            </info>
+                            <swaggerDirectory>apidocs</swaggerDirectory>
+                        </apiSource>
+                    </apiSources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

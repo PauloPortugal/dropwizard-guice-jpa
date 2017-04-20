@@ -1,0 +1,10 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "RESTful interface to easily consuming the Task API",
+    "version" : "v1.0.0",
+    "title" : "REST Task API"
+  },
+  "host" : "app.domain.com",
+  "schemes" : [ "https" ]
+}
