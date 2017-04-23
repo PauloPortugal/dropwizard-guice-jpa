@@ -3,5 +3,5 @@ jdk:
   - oraclejdk8
 script: mvn clean verify
 notifications:
-  email: false
+  on_failure: always
 
