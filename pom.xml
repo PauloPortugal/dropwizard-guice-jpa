@@ -223,9 +223,13 @@
                     <apiSources>
                         <apiSource>
                             <springmvc>false</springmvc>
-                            <locations>com.pmonteiro.dropwizard.resources</locations>
-                            <schemes>http</schemes>
-                            <schemes>https</schemes>
+                            <locations>
+                                <location>com.pmonteiro.dropwizard.resources</location>
+                            </locations>
+                            <schemes>
+                                <scheme>http</scheme>
+                                <scheme>https</scheme>
+                            </schemes>
                             <host>app.domain.com</host>
                             <info>
                                 <title>REST Task API</title>

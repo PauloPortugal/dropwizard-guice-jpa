@@ -14,7 +14,7 @@ __Version__ : v1.0.0
 === URI scheme
 [%hardbreaks]
 __Host__ : app.domain.com
-__Schemes__ : HTTPS
+__Schemes__ : HTTP, HTTPS
 
 
 

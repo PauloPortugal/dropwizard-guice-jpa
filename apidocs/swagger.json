@@ -6,7 +6,7 @@
     "title" : "REST Task API"
   },
   "host" : "app.domain.com",
-  "schemes" : [ "https" ],
+  "schemes" : [ "http", "https" ],
   "paths" : {
     "/tasks" : {
       "get" : {
