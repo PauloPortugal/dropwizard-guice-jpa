@@ -7,6 +7,8 @@ import com.pmonteiro.dropwizard.resources.TasksResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import io.federecio.dropwizard.swagger.SwaggerBundle;
+import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 import org.flywaydb.core.Flyway;
 
 public class DropwizardGuiceApplication extends Application<DropwizardGuiceConfiguration> {
@@ -22,7 +24,12 @@ public class DropwizardGuiceApplication extends Application<DropwizardGuiceConfi
 
     @Override
     public void initialize(final Bootstrap<DropwizardGuiceConfiguration> bootstrap) {
-        // TODO: application initialization
+        bootstrap.addBundle(new SwaggerBundle<DropwizardGuiceConfiguration>() {
+            @Override
+            protected SwaggerBundleConfiguration getSwaggerBundleConfiguration(DropwizardGuiceConfiguration configuration) {
+                return configuration.getSwaggerBundleConfiguration();
+            }
+        });
     }
 
     @Override
@@ -39,5 +46,4 @@ public class DropwizardGuiceApplication extends Application<DropwizardGuiceConfi
 
         injector.getInstance(PersistInitialiser.class);
     }
-
 }
