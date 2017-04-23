@@ -1,28 +1,6 @@
-[![Build Status](https://travis-ci.org/PauloPortugal/dropwizard-guice-jpa.png)](https://travis-ci.org/PauloPortugal/dropwizard-guice-jpa.svg?branch=master)
-
-# Dropwizard Guice and JPA application
-
-This a RESTful Dropwizard application, to provide an example on how to integrate JPA in Dropwizard, using dependency injection.
-The example is a simple RESTful interface to easily manage a task planner.
-
-- using [Dropwizard](https://dropwizard.github.io/dropwizard/) v1.1.0 framework
-- dependency injection achieve through [Google Guice](https://code.google.com/p/google-guice/)
-- JPA implementation through [Hibernate](http://hibernate.org/)
-- [H2](http://http://www.h2database.com/) as an in-memory database
-- [rest-assured](https://code.google.com/p/rest-assured/) for the integration tests
-- API documentation provided by [swagger.io](http://swagger.io//) and [swagger UI](http://swagger.io/swagger-ui/)
-
-How to start the DropwizardGuice application
----
-
-1. Run `mvn clean install` to build your application
-1. Start application with `java -jar target/dropwizard-guice-1.0-SNAPSHOT.jar server config.yml`
-1. To check that the application is running enter url `http://localhost:8080`
-1. To interact with the application using Swagger UI endpoints enter url `http://localhost:8080/swagger`
-
 
 <a name="paths"></a>
-## API Paths
+## Paths
 
 <a name="create"></a>
 ### Creates a new task

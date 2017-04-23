@@ -265,7 +265,7 @@
                     <swaggerInput>apidocs/swagger.json</swaggerInput>
                     <outputDir>apidocs/</outputDir>
                     <config>
-                        <swagger2markup.markupLanguage>ASCIIDOC</swagger2markup.markupLanguage>
+                        <swagger2markup.markupLanguage>MARKDOWN</swagger2markup.markupLanguage>
                     </config>
                 </configuration>
                 <executions>
