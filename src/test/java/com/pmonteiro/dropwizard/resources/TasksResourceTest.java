@@ -30,7 +30,7 @@ public class TasksResourceTest {
 
 
     @Before
-    public void setup() {
+    public void setUp() {
         jdbi = factory.build(rule.getEnvironment(), rule.getConfiguration().getDataSourceFactory(), "postgres");
         jdbi.withHandle(handle -> handle.update("DELETE FROM tasks"));
         jdbi.withHandle(handle -> handle.update("ALTER TABLE tasks ALTER COLUMN id RESTART WITH 1"));
