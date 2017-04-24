@@ -2,16 +2,14 @@ package com.pmonteiro.dropwizard.core;
 
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 @MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
-
-    /**
-     * For JPA purposes
-     */
-    public AbstractEntity() {}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
