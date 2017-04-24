@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82869bd865d74a09bee564cc761c831a)](https://www.codacy.com/app/PauloPortugal/dropwizard-guice-jpa?utm_source=github.com&utm_medium=referral&utm_content=PauloPortugal/dropwizard-guice-jpa&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/PauloPortugal/dropwizard-guice-jpa.png)](https://travis-ci.org/PauloPortugal/dropwizard-guice-jpa.svg?branch=master)
 
 # Dropwizard Guice and JPA application
