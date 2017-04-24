@@ -7,8 +7,6 @@ import com.google.inject.persist.Transactional;
 import com.pmonteiro.dropwizard.core.Task;
 import com.pmonteiro.dropwizard.dao.TaskDAO;
 import io.swagger.annotations.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -23,7 +21,6 @@ import static javax.ws.rs.core.Response.*;
 @Produces(APPLICATION_JSON)
 public class TasksResource {
 
-    private final Logger logger = LoggerFactory.getLogger(TasksResource.class);
     private TaskDAO dao;
 
     @Inject
