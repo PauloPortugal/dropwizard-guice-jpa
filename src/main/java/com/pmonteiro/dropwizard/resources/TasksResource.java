@@ -23,7 +23,7 @@ import static javax.ws.rs.core.Response.*;
 @Produces(APPLICATION_JSON)
 public class TasksResource {
 
-    final Logger logger = LoggerFactory.getLogger(TasksResource.class);
+    private final Logger logger = LoggerFactory.getLogger(TasksResource.class);
     private TaskDAO dao;
 
     @Inject
