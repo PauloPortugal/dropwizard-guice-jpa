@@ -11,6 +11,7 @@ The example is a simple RESTful interface to easily manage a task planner.
 - [H2](http://http://www.h2database.com/) as an in-memory database
 - [rest-assured](https://code.google.com/p/rest-assured/) for the integration tests
 - API documentation provided by [swagger.io](http://swagger.io//) and [swagger UI](http://swagger.io/swagger-ui/)
+- Database migrations provided by [FlywayDB](https://flywaydb.org/)
 
 How to start the DropwizardGuice application
 ---
