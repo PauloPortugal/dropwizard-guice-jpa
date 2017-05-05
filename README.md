@@ -2,7 +2,7 @@
 
 # Dropwizard Guice and JPA application
 
-This a RESTful Dropwizard application, to provide an example on how to integrate JPA in Dropwizard, using dependency injection.
+This a dockerized RESTful Dropwizard application, to provide an example on how to integrate JPA in Dropwizard, using dependency injection.
 The example is a simple RESTful interface to easily manage a task planner.
 
 - using [Dropwizard](https://dropwizard.github.io/dropwizard/) v1.1.0 framework
@@ -12,6 +12,7 @@ The example is a simple RESTful interface to easily manage a task planner.
 - [rest-assured](https://code.google.com/p/rest-assured/) for the integration tests
 - API documentation provided by [swagger.io](http://swagger.io//) and [swagger UI](http://swagger.io/swagger-ui/)
 - Database migrations provided by [FlywayDB](https://flywaydb.org/)
+- [Docker](https://www.docker.com/) as the containerisation solution
 
 How to start the DropwizardGuice application
 ---
