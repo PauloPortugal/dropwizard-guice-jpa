@@ -25,13 +25,12 @@ public class TasksResourceTest {
 
     @Rule
     public DAOTestRule database = DAOTestRule.newBuilder().addEntityClass(Task.class).build();
-    private final DBIFactory factory = new DBIFactory();
     private DBI jdbi;
 
 
     @Before
     public void setUp() {
-        jdbi = factory.build(rule.getEnvironment(), rule.getConfiguration().getDataSourceFactory(), "postgres");
+        jdbi = new DBIFactory().build(rule.getEnvironment(), rule.getConfiguration().getDataSourceFactory(), "postgres");
         jdbi.withHandle(handle -> handle.update("DELETE FROM tasks"));
         jdbi.withHandle(handle -> handle.update("ALTER TABLE tasks ALTER COLUMN id RESTART WITH 1"));
     }
