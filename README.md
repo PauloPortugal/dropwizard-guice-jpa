@@ -17,11 +17,11 @@ The example is a simple RESTful interface to easily manage a task planner.
 How to start the DropwizardGuice application
 ---
 
-1. Run `mvn clean install` to build your application
-1. Start application with `java -jar target/dropwizard-guice-1.0-SNAPSHOT.jar server config.yml`
+1. Run `mvn clean package` to build your application
+1. Start application with `java -jar target/dropwizard-guice-1.0-SNAPSHOT-uber.jar server target/config.yml`
 1. To check that the application is running enter url `http://localhost:8080`
 1. To interact with the application using Swagger UI endpoints enter url `http://localhost:8080/swagger`
-
+1. To run the application inside a docker container, `./docker-run.sh`
 
 <a name="paths"></a>
 ## API Paths
