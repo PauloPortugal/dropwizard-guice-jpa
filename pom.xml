@@ -103,6 +103,7 @@
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-testing</artifactId>
             <version>${dropwizard.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -131,6 +132,7 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.4.1</version>
                 <configuration>
+                    <outputFile>target/${project.artifactId}-${project.version}-uber.jar</outputFile>
                     <createDependencyReducedPom>true</createDependencyReducedPom>
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-java -jar *-allinone.jar server *.yml
+java -jar dropwizard-guice-*-uber.jar server *.yml

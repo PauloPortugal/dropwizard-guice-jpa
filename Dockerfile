@@ -15,7 +15,7 @@ EXPOSE 8081
 WORKDIR /app
 
 ADD target/config.yml /app/
-ADD target/original-dropwizard-guice-*.jar /app/
+ADD target/dropwizard-guice-*-uber.jar /app/
 ADD docker-start.sh /app/docker-start.sh
 
 CMD bash ./docker-start.sh
