@@ -2,11 +2,15 @@ package com.pmonteiro.dropwizard.resources;
 
 import com.pmonteiro.dropwizard.DropwizardGuiceApplication;
 import com.pmonteiro.dropwizard.DropwizardGuiceConfiguration;
+import com.pmonteiro.dropwizard.api.TaskApi;
 import com.pmonteiro.dropwizard.core.Task;
 import io.dropwizard.jdbi.DBIFactory;
 import io.dropwizard.testing.junit.DAOTestRule;
 import io.dropwizard.testing.junit.DropwizardAppRule;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.ClassRule;
+import org.junit.Rule;
+import org.junit.Test;
 import org.skife.jdbi.v2.DBI;
 
 import static io.dropwizard.testing.ResourceHelpers.resourceFilePath;
@@ -77,7 +81,7 @@ public class TasksResourceTest {
 
     @Test
     public void create() throws Exception {
-        Task task = new Task("description");
+        TaskApi task = new TaskApi("description");
         given()
                 .accept(JSON)
                 .contentType(JSON)
@@ -90,7 +94,7 @@ public class TasksResourceTest {
                 .body("id", is(1));
     }
 
-    @Test @Ignore
+    @Test
     public void update_whenTaskDoesNotExist_ShouldReturn404() throws Exception {
         Task task = new Task("description");
         given()

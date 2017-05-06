@@ -4,6 +4,7 @@ import com.codahale.metrics.annotation.Timed;
 import com.google.common.collect.ImmutableMap;
 import com.google.inject.Inject;
 import com.google.inject.persist.Transactional;
+import com.pmonteiro.dropwizard.api.TaskApi;
 import com.pmonteiro.dropwizard.core.Task;
 import com.pmonteiro.dropwizard.dao.TaskDAO;
 import io.swagger.annotations.*;
@@ -60,8 +61,9 @@ public class TasksResource {
             value = "Creates a new task",
             notes = "Creates a new task. Task descriptions are not unique.")
     @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Created", response = Task.class)})
-    public Response create(@ApiParam(value = "payload", required = true) Task task) {
+            @ApiResponse(code = 201, message = "Created", response = TaskApi.class)})
+    public Response create(@ApiParam(value = "payload", required = true) TaskApi taskApi) {
+        Task task = new Task(taskApi);
         dao.persist(task);
         return status(CREATED).entity(task).build();
     }

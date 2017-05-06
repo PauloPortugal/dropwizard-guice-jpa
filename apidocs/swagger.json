@@ -38,14 +38,14 @@
           "description" : "payload",
           "required" : true,
           "schema" : {
-            "$ref" : "#/definitions/Task Entity"
+            "$ref" : "#/definitions/A new task"
           }
         } ],
         "responses" : {
           "201" : {
             "description" : "Created",
             "schema" : {
-              "$ref" : "#/definitions/Task Entity"
+              "$ref" : "#/definitions/A new task"
             }
           }
         }
@@ -137,6 +137,16 @@
     }
   },
   "definitions" : {
+    "A new task" : {
+      "type" : "object",
+      "properties" : {
+        "description" : {
+          "type" : "string",
+          "example" : "Lorem Ipsum, porro quisquam est qui dolorem ipsum quia dolo"
+        }
+      },
+      "description" : "A description of a task"
+    },
     "Task Entity" : {
       "type" : "object",
       "properties" : {

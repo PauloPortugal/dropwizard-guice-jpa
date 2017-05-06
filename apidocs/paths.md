@@ -17,14 +17,14 @@ Creates a new task. Task descriptions are not unique.
 
 |Type|Name|Description|Schema|
 |---|---|---|---|
-|**Body**|**body**  <br>*required*|payload|[Task Entity](#task-entity)|
+|**Body**|**body**  <br>*required*|payload|[A new task](#a-new-task)|
 
 
 #### Responses
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**201**|Created|[Task Entity](#task-entity)|
+|**201**|Created|[A new task](#a-new-task)|
 
 
 #### Consumes

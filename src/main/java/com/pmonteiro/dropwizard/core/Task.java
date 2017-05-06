@@ -1,5 +1,6 @@
 package com.pmonteiro.dropwizard.core;
 
+import com.pmonteiro.dropwizard.api.TaskApi;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -20,6 +21,10 @@ public class Task extends AbstractEntity {
 
     public Task(String description) {
         this.description = description;
+    }
+
+    public Task(TaskApi task) {
+        this.description = task.getDescription();
     }
 
     public String getDescription() {
