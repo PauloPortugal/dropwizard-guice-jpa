@@ -4,6 +4,7 @@ package com.pmonteiro.dropwizard.dao;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
+import com.pmonteiro.dropwizard.api.TaskApi;
 import com.pmonteiro.dropwizard.core.Task;
 
 import javax.persistence.EntityManager;
@@ -22,7 +23,7 @@ public class TaskDAO extends BaseDAO {
         return findById(Task.class, id);
     }
 
-    public Optional<Integer> update(final Task task, Long id) {
+    public Optional<Integer> update(final TaskApi task, Long id) {
         Query query = getEntityManager()
                 .createQuery("UPDATE Task SET description=:description WHERE id = :id")
                 .setParameter("description", task.getDescription())

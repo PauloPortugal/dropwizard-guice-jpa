@@ -107,7 +107,7 @@ Updates a task description if available in the database
 |Type|Name|Description|Schema|
 |---|---|---|---|
 |**Path**|**taskId**  <br>*required*|taskId|integer(int64)|
-|**Body**|**body**  <br>*required*|payload|[Task Entity](#task-entity)|
+|**Body**|**body**  <br>*required*|payload|[A new task](#a-new-task)|
 
 
 #### Responses

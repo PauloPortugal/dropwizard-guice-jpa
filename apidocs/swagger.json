@@ -98,7 +98,7 @@
           "description" : "payload",
           "required" : true,
           "schema" : {
-            "$ref" : "#/definitions/Task Entity"
+            "$ref" : "#/definitions/A new task"
           }
         } ],
         "responses" : {

@@ -79,7 +79,7 @@ public class TasksResource {
             @ApiResponse(code = 200, message = "Updated"),
             @ApiResponse(code = 404, message = "Not Found")})
     public Response update(@ApiParam(value = "taskId", example = "1") @PathParam("taskId") Long id,
-                           @ApiParam(value = "payload", required = true) Task task) {
+                           @ApiParam(value = "payload", required = true) TaskApi task) {
         return dao.update(task, id)
                 .filter(updatedRows ->  updatedRows == 1)
                 .map(updated -> ok().build())
