@@ -16,6 +16,5 @@ WORKDIR /app
 
 ADD target/config.yml /app/
 ADD target/dropwizard-guice-*-uber.jar /app/
-ADD docker-start.sh /app/docker-start.sh
 
-CMD bash ./docker-start.sh
+CMD java -jar dropwizard-guice-*-uber.jar server config.yml
