@@ -96,11 +96,10 @@ public class TasksResourceTest {
 
     @Test
     public void update_whenTaskDoesNotExist_ShouldReturn404() throws Exception {
-        Task task = new Task("description");
         given()
                 .accept(JSON)
                 .contentType(JSON)
-                .body(task)
+                .body(new TaskApi("description"))
         .when()
                 .put("/tasks/1")
         .then()
@@ -110,11 +109,10 @@ public class TasksResourceTest {
     @Test
     public void update_whenTaskExists_ShouldUpdateTask() throws Exception {
         insertTask(new Task("description"));
-        Task changedTaskDescription = new Task("new-description");
         given()
                 .accept(JSON)
                 .contentType(JSON)
-                .body(changedTaskDescription)
+                .body(new TaskApi("new-description"))
         .when()
                 .put("/tasks/1")
         .then()
