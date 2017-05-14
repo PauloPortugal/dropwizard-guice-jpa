@@ -1,4 +1,5 @@
 FROM openjdk:8-jre-alpine
+MAINTAINER https://hub.docker.com/u/pauloportugal/
 
 RUN apk update
 RUN apk upgrade
@@ -14,7 +15,7 @@ EXPOSE 8081
 
 WORKDIR /app
 
-ADD target/config.yml /app/
+COPY target/config.yml /app/
 ADD target/dropwizard-guice-*-uber.jar /app/
 
 CMD java -jar dropwizard-guice-*-uber.jar server config.yml
