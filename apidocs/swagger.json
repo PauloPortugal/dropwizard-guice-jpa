@@ -102,7 +102,7 @@
           }
         } ],
         "responses" : {
-          "200" : {
+          "204" : {
             "description" : "Updated"
           },
           "404" : {
@@ -127,7 +127,7 @@
         } ],
         "responses" : {
           "204" : {
-            "description" : "No Content"
+            "description" : "Deleted"
           },
           "404" : {
             "description" : "Not Found"
