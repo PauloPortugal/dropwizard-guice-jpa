@@ -13,6 +13,7 @@ The example is a simple RESTful interface to easily manage a task planner.
 - API documentation provided by [swagger.io](http://swagger.io//) and [swagger UI](http://swagger.io/swagger-ui/)
 - Database migrations provided by [FlywayDB](https://flywaydb.org/)
 - [Docker](https://www.docker.com/) as the containerisation solution
+- using [Hate](https://github.com/blackdoor/hate) library as HATEOAS with HAL implementation
 
 How to start the DropwizardGuice application
 ---

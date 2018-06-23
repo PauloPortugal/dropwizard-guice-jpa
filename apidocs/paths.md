@@ -114,7 +114,7 @@ Updates a task description if available in the database
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**200**|Updated|No Content|
+|**204**|Updated|No Content|
 |**404**|Not Found|No Content|
 
 
@@ -150,7 +150,7 @@ Deletes a if available in the database
 
 |HTTP Code|Description|Schema|
 |---|---|---|
-|**204**|No Content|No Content|
+|**204**|Deleted|No Content|
 |**404**|Not Found|No Content|
 
 
