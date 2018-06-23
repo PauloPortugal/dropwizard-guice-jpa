@@ -12,7 +12,7 @@ import javax.persistence.Query;
 import java.util.Optional;
 
 @Transactional
-public class TaskDAO extends BaseDAO {
+public class TaskDAO extends BaseDAO<Task> {
 
     @Inject
     public TaskDAO(final Provider<EntityManager> entityManager) {

@@ -6,7 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.ws.rs.WebApplicationException;
 import java.io.Serializable;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 @MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
@@ -18,5 +21,13 @@ public abstract class AbstractEntity implements Serializable {
 
     public Long getId() {
         return id;
+    }
+
+    protected URI location(String uri) {
+        try {
+            return new URI(uri);
+        } catch (URISyntaxException e) {
+            throw new WebApplicationException("Could not create URI for task " + getId(), e);
+        }
     }
 }

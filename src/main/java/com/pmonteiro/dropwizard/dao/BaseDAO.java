@@ -15,8 +15,8 @@ public abstract class BaseDAO<T> {
         this.entityManager = entityManager;
     }
 
-    public Optional<List> find(final Class<T> clazz) {
-        return Optional.of(entityManager.get().createQuery("Select t from " + clazz.getSimpleName() + " t").getResultList());
+    public Optional<List<T>> find(final Class<T> clazz) {
+        return Optional.ofNullable(entityManager.get().createQuery("Select t from " + clazz.getSimpleName() + " t").getResultList());
     }
 
     public void persist(final T object) {
