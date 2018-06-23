@@ -98,6 +98,18 @@
             <version>1.4.194</version>
         </dependency>
 
+        <!-- HATEOS HAL dependencies-->
+        <dependency>
+            <groupId>black.door</groupId>
+            <artifactId>hate</artifactId>
+            <version>v1r4t0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.6</version>
+        </dependency>
+
         <!-- Test dependencies -->
         <dependency>
             <groupId>io.dropwizard</groupId>
